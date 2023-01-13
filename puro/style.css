@@ -53,10 +53,31 @@ a {
 .header-nav li:first-child a {
   padding-left: 0;
 }
+@media (max-width: 739px) {
+  .header-logo {
+    float: none;
+  }
+  .header-logo img {
+    margin: 0 auto;
+  }
+  .header-nav {
+    float: none;
+    margin-top: 20px;
+  }
+  .header-nav ul {
+    margin: 0 auto;
+    max-width: fit-content;
+  }
+  .header-nav li a {
+    display: inline-block;
+    padding: 10px;
+  }
+}
 
 /* MAIN */
 .main-container {
   display: flex;
+  /* EXCEÇÃO PARA EVITAR USOS DE GAMBIARRAS, GAMBIARRAS QUE SERIAM NECESSÁRIAS PARA FAZER O MENU LATERAL PEGAR TODA A ALTURA DO CONTAINER DE PRODUTOS */
 }
 @media (max-width: 739px) {
   .main-container {
@@ -73,7 +94,7 @@ a {
   display: block;
   color: #E6EAF0;
   border-bottom: 2px solid #474D59;
-  font-size: 1.125em;
+  font-size: 1em;
   padding: 20px;
 }
 .side-nav li a::before {
@@ -103,6 +124,36 @@ a {
 }
 .nav-hospedagens::before {
   background-position: 0 calc(-24px * 5);
+}
+@media (min-width: 739px) and (max-width: 980px) {
+  .side-nav {
+    width: 200px;
+  }
+}
+@media (max-width: 739px) {
+  .side-nav {
+    margin: 20px 0 0 20px;
+    background: none;
+    width: auto;
+  }
+  .side-nav li {
+    display: inline-block;
+  }
+  .side-nav li a::before {
+    display: block;
+    margin: 0;
+    top: 0;
+  }
+  .side-nav li a {
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    padding: 10px;
+    border: none;
+    color: #363B47;
+    background-color: #363B47;
+    border-radius: 5px;
+  }
 }
 
 /* PRODUTOS */
@@ -180,6 +231,52 @@ a {
   display: inline-block;
   font-weight: 600;
   width: 70px;
+}
+@media (min-width: 739px) and (max-width: 980px) {
+  .produtos {
+    width: calc(100% - 200px);
+  }
+}
+@media (max-width: 739px) {
+  .produtos {
+    width: 100%;
+  }
+  .produtos h1 {
+    float: none;
+  }
+  .adicionar-produtos {
+    float: none;
+    display: inline-block;
+    margin: 10px 0;
+    width: 100%;
+  }
+  .produtos-item img {
+    float: none;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    max-height: 150px;
+  }
+  .produtos-item ul {
+    margin-top: 5px;
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+  .produtos-item a {
+    background-color: #E6EAF0;
+    background-position: center;
+    border-radius: 5px;
+    width: 33px;
+    height: 33px;
+    top: 30px;
+    right: 30px;
+  }
+  .produtos-item a:hover {
+    background: url('../img/editar-hover.svg') no-repeat;
+    background-color: #E6EAF0;
+    background-position: center;
+  }
 }
 
 /* FOOTER */
