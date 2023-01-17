@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./img/fav.svg" type="image/svg+xml">
+  <title>Studysets Panel</title>
+</head>
+
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    background: #0b0c12;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 100vh;
+    padding: 15px;
+  }
+  .menu{
+    text-align: center;
+    color: #636973;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+  }
+  a{
+    display: block;
+    padding: 13px;
+    background: #161B22;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: .2s;
+  }
+  a:hover{
+    transform: translate3d(0, -10px, 0);
+    background: #474D5973;
+  }
+  a:hover .itens-texto p{
+    color: #58A6FF;
+  }
+  .itens-texto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    width: 200px;
+    max-width: 200px;
+  }
+  .itens-texto h2{
+    font-size: 18px;
+    font-weight: 600;
+    color: #58A6FF;
+  }
+  .itens-texto p{
+    font-size: 11px;
+    color: #2C3239;
+    transition: .2s;
+  }
+  .itens-imagem{
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .itens-imagem img{
+    width: 100%;
+  }
+</style>
+
+<body>
+
+  <header class="menu">
+    <img src="./img/logo.svg" alt="Studysets">
+    <p>Escolha um modo para visualizar o projeto</p>
+  </header>
+  
+  <main class="intro">
+    <nav>
+      <ul>
+        <li>
+          <a href="./puro/puro.html">
+            <div class="itens-texto">
+              <h2>puro</h2>
+              <p>usando float</p>
+            </div>
+            <div class="itens-imagem">
+              <img src="./img/puro.jpg">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./flexbox/flexbox.html">
+            <div class="itens-texto">
+              <h2>flexbox</h2>
+              <p>mais atual</p>
+            </div>
+            <div class="itens-imagem">
+              <img src="./img/flex.jpg">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="./bootstrap/bootstrap.html">
+            <div class="itens-texto">
+              <h2>bootstrap</h2>
+              <p>framework</p>
+            </div>
+            <div class="itens-imagem">
+              <img src="./img/bootstrap.jpg">
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </main>
+  
+</body>
+</html>
